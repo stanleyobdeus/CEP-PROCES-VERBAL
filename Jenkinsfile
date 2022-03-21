@@ -15,10 +15,7 @@ node{
   
   stage("Run image"){
     
-    docker.image('cep-back-end').withRun('-p 8181:8181'){ c->
-      sh 'docker ps'
-      
-    }
+        sh 'docker run -p 8181:8181 cep-back-end'
   }
 
 }
