@@ -14,8 +14,9 @@ node{
   }
   
   stage("Run image"){
+        sh 'docker container rm cep-back-end --force'
     
-        sh 'docker run --network oni -p 8181:8181 -d cep-back-end'
+        sh 'docker run --network oni --name cep-back-end -p 8181:8181 -d cep-back-end'
   }
 
 }
