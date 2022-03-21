@@ -17,7 +17,6 @@ node{
     
     docker.image('cep-back-end').withRun('-p 8181:8181'){ c->
       sh 'docker ps'
-      sh 'curl localhost'
       
     }
   }
