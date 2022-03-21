@@ -5,6 +5,10 @@ node{
     checkout scm
   }
   
+  stage('Maven '){
+    sh 'mvn clean package -DskipTests'
+  }
+  
   stage('Build image'){
     app= docker.build("cep-back-end")
   }
